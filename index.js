@@ -52,16 +52,20 @@ function showResetBtn() {
 })
  
  resetBtn.addEventListener("click", function() {
-     player1Score = 0;
-     player2Score = 0;
-     player1Scoreboard.textContent = player1Score;
-     player2Scoreboard.textContent = player2Score;
-     player1Dice.textContent = "-";
-     player2Dice.textContent = "-";
-     rollBtn.style.display = "block";
-     resetBtn.style.display = "none";
-     player1Turn = true;
-     player2Dice.classList.remove("active");
-     player1Dice.classList.add("active");
-     message.textContent = "Player 1 Turn";
+    gameReset();
  })
+
+ function gameReset() {
+    player1Score = 0;
+    player2Score = 0;
+    player1Scoreboard.textContent = player1Score;
+    player2Scoreboard.textContent = player2Score;
+    player1Dice.textContent = "-";
+    player2Dice.textContent = "-";
+    rollBtn.style.display = "block";
+    resetBtn.style.display = "none";
+    player1Turn = true;
+    player2Dice.classList.remove("active");
+    player1Dice.classList.add("active");
+    message.textContent = "Player 1 Turn";
+ }
